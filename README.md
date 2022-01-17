@@ -30,6 +30,7 @@ This exercise is designed to examine your ability to;
 * We are not assessing your ability to turn this around quickly - we all have lives and jobs to attend to.
 * When submitting the PR, commentary is appreciated.
 * You may create and use a database for this process if you feel it is necessary.
+* You can create a magento module to achieve this task
 * For any area you choose to skip, or cannot complete, describe what you would do using psuedocode or comments in it's place
 
 ## Key outputs
