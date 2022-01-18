@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="HN\HeadCount\Api\Data\GridInterface" type="HN\HeadCount\Model\Grid" />
+    <preference for="Magento\ImportExport\Controller\Adminhtml\Import\Download" type="HN\HeadCount\Controller\Adminhtml\Import\Download"/>
+    <virtualType name="HN\HeadCount\Model\ResourceModel\Grid\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">hn_headcounts</argument>
+            <argument name="resourceModel" xsi:type="string">HN\HeadCount\Model\ResourceModel\Grid</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="grid_record_grid_list_data_source" xsi:type="string">HN\HeadCount\Model\ResourceModel\Grid\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="HN\HeadCount\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="HN\HeadCount\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">customLogHandler</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">HN\HeadCount\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+     <type name="Magento\ImportExport\Model\Import\SampleFileProvider">
+        <arguments>
+            <argument name="samples" xsi:type="array">
+                <item name="custom_import" xsi:type="string">HN_HeadCount</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

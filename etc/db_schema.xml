@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="hn_headcounts">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" comment="ID" identity="true" />
+        <column xsi:type="int" name="school_code" padding="10" unsigned="true" nullable="false" comment="School Code" />
+
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="School Name"/>
+
+        <column xsi:type="int" name="hc_2004" padding="10" unsigned="true" nullable="true" comment="Year 2004"/>
+        <column xsi:type="int" name="hc_2005" padding="10" unsigned="true" nullable="true" comment="Year 2005"/>
+        <column xsi:type="int" name="hc_2006" padding="10" unsigned="true" nullable="true" comment="Year 2006"/>
+        <column xsi:type="int" name="hc_2007" padding="10" unsigned="true" nullable="true" comment="Year 2007"/>
+        <column xsi:type="int" name="hc_2008" padding="10" unsigned="true" nullable="true" comment="Year 2008"/>
+        <column xsi:type="int" name="hc_2009" padding="10" unsigned="true" nullable="true" comment="Year 2009"/>
+        <column xsi:type="int" name="hc_2010" padding="10" unsigned="true" nullable="true" comment="Year 2010"/>
+        <column xsi:type="int" name="hc_2011" padding="10" unsigned="true" nullable="true" comment="Year 2011"/>
+        <column xsi:type="int" name="hc_2012" padding="10" unsigned="true" nullable="true" comment="Year 2012"/>
+        <column xsi:type="int" name="hc_2013" padding="10" unsigned="true" nullable="true" comment="Year 2013"/>
+        <column xsi:type="int" name="hc_2014" padding="10" unsigned="true" nullable="true" comment="Year 2014"/>
+        <column xsi:type="int" name="hc_2015" padding="10" unsigned="true" nullable="true" comment="Year 2015"/>
+        <column xsi:type="int" name="hc_2016" padding="10" unsigned="true" nullable="true" comment="Year 2016"/>
+        <column xsi:type="int" name="hc_2017" padding="10" unsigned="true" nullable="true" comment="Year 2017"/>
+        <column xsi:type="int" name="hc_2018" padding="10" unsigned="true" nullable="true" comment="Year 2018"/>
+        
+        <constraint xsi:type="primary" referenceId="CUSTOM_IMPORT_ID_PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
