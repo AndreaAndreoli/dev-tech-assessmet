@@ -41,8 +41,7 @@ https://docdro.id/CBm2IwU
 * Instead of adding HC_YEAR(s) as a separate column, I could have add an attribute called YEAR and add those year entries in that specific attribute. For example, if you add HC_2019 in your CSV file, it would have pick the 2019 automatically as a year and will add the year's value against the school code's HeadCount.
 * Search feature to search by ranging years "From" to "To".
 * Magento Extension's Enable/Disable feature which could be set as global in general settings.
-
-Magento DevDocs and Other links I used to write this extension
+## Magento DevDocs and Other links I used to write this extension
 
 * For Importing Custom Entity : https://devdocs.magento.com/guides/v2.4/ext-best-practices/tutorials/custom-import-entity.html
 * For Creating a Module : https://devdocs.magento.com/videos/fundamentals/create-a-new-module/
