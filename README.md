@@ -19,7 +19,7 @@ NSW Headcount Data
 
 ## Steps to check functionality in Admin Panel
 
-[embed]https://docdro.id/CBm2IwU[/embed]
+https://docdro.id/CBm2IwU
 
 ## Additionals Features/Functionalities that I could have added to make this more scalabale
 
