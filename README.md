@@ -2,17 +2,19 @@
 
 ## Overview
 
-This exercise is designed to examine your ability to;
+NSW Headcount Data
 
-* Understand key requirements
-* Utilise third party libraries
-* Implement effective tests
+* By uploading CSV using Magento Importer Method and Factories.
+* By using default REST API ( routes are not added yet )
+* Can be added manually from Magento's admin panel
 
-## Guidelines
+## Guidelines to install
 
-* Fork this repository
-* Commit often
-* Create a PR back to the repository once you're happy
+* Please create two directories "HN/HeadCount" inside app/code/ 
+* Once done, please use CLI and run the following commands.
+<code>php bin/magento setup:upgrade</code>
+<code>php bin/magento setup:static-content:deploy</code>
+<code>php bin/magento cache:clean</code>
 
 ## Tasks
 
