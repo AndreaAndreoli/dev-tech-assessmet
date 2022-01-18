@@ -2,39 +2,26 @@
 
 ## Overview
 
-This exercise is designed to examine your ability to;
+NSW Headcount Data
 
-* Understand key requirements
-* Utilise third party libraries
-* Implement effective tests
+* By uploading CSV using Magento Importer Method and Factories.
+* By using default REST API ( routes are not added yet )
+* Can be added manually from Magento's admin panel
 
-## Guidelines
+## Guidelines to install
 
-* Fork this repository
-* Commit often
-* Create a PR back to the repository once you're happy
+* Please create two directories "HN/HeadCount" inside app/code/ 
+* Once done, please use CLI and run the following commands.
 
-## Tasks
+* <code>php bin/magento setup:upgrade</code>
+* <code>php bin/magento setup:static-content:deploy</code>
+* <code>php bin/magento cache:clean</code>
 
-* Create a basic implementation, in a framework of your choice, (or using bare PHP code), which:
-   * Collects the [NSW government school enrolments by head count (2004-2018)](https://data.cese.nsw.gov.au/data/dataset/nsw-government-school-enrolments-by-head-count)
-   * Presents the above data in a somewhat useful fashion
-   * Refreshes the data if it is older than a defined period, (you can define the period)
-* Implement tests to validate key aspects of the above, (_a_ test, at least)
-* Add a method that allows a user to view information about the dataset, (eg; when it was last downloaded, how many records, etc).
-* Provide basic usage instructions so we know what you've done
+## Steps to check functionality in Admin Panel
 
-## Notes
+[embed]https://docdro.id/CBm2IwU[/embed]
 
-* Try to spend less than a few hours - you may cut features or spend more time.
-* We are not assessing your ability to turn this around quickly - we all have lives and jobs to attend to.
-* When submitting the PR, commentary is appreciated.
-* You may create and use a database for this process if you feel it is necessary.
-* You can create a magento module to achieve this task
-* For any area you choose to skip, or cannot complete, describe what you would do using psuedocode or comments in it's place
+## Additionals Features/Functionalities that I could have added to make this more scalabale
 
-## Key outputs
-
-* A data transfer process that handles failure
-* An efficient data transformation process
-* Tests that run
+* Setting up WebAPI routes to perform CRUD using REST API.
+* Instead of adding HC_YEAR(s) as a separate column, I could have add an attribute called YEAR and add those year entries in that specific attribute. For example, if you add HC_2019 in your CSV file, it would have pick the 2019 automatically as a year and will add the year's value against the school code's HeadCount.
