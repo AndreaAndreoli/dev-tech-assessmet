@@ -1,40 +1,50 @@
 # Tech Showcase
-
 ## Overview
 
-This exercise is designed to examine your ability to;
+NSW Headcount Data Importer
 
-* Understand key requirements
-* Utilise third party libraries
-* Implement effective tests
+* By uploading CSV using Magento Importer Method and Factories.
+* By using default REST API ( routes are not added yet )
+* Can be added manually from Magento's admin panel
+* CRUD to give more control to admin to deal with data in case of any mistake or urgent editing required and can not access CSV.
+* Presenting the data as per as Magento's standard
+* Search ability by using School code and School name on AdminHTML Grid
+* Import History can be seen in SYSTEM - > Import History
 
-## Guidelines
+## Pre-Requisites
 
-* Fork this repository
-* Commit often
-* Create a PR back to the repository once you're happy
+* Installed or Instanced Magento 2.4.x
+* Right CSV format which can be downloaded from Magento admin after installating of this extension
+## Guidelines to install
 
-## Tasks
+* Please create two directories "HN/HeadCount" inside app/code/ 
+* Once done, please use CLI and run the following commands.
 
-* Create a basic implementation, in a framework of your choice, (or using bare PHP code), which:
-   * Collects the [NSW government school enrolments by head count (2004-2018)](https://data.cese.nsw.gov.au/data/dataset/nsw-government-school-enrolments-by-head-count)
-   * Presents the above data in a somewhat useful fashion
-   * Refreshes the data if it is older than a defined period, (you can define the period)
-* Implement tests to validate key aspects of the above, (_a_ test, at least)
-* Add a method that allows a user to view information about the dataset, (eg; when it was last downloaded, how many records, etc).
-* Provide basic usage instructions so we know what you've done
+* <code>php bin/magento setup:upgrade</code>
+* <code>php bin/magento setup:static-content:deploy</code>
+* <code>php bin/magento cache:clean</code>
 
-## Notes
+## Compaitable with other Magento Versions
 
-* Try to spend less than a few hours - you may cut features or spend more time.
-* We are not assessing your ability to turn this around quickly - we all have lives and jobs to attend to.
-* When submitting the PR, commentary is appreciated.
-* You may create and use a database for this process if you feel it is necessary.
-* You can create a magento module to achieve this task
-* For any area you choose to skip, or cannot complete, describe what you would do using psuedocode or comments in it's place
+Tested on the following versions.
 
-## Key outputs
+* Magento 2.3.2
+* Magento 2.4.2
 
-* A data transfer process that handles failure
-* An efficient data transformation process
-* Tests that run
+## Steps to check functionality in Admin Panel
+
+https://docdro.id/CBm2IwU
+
+## Additionals Features/Functionalities that I could have added/can do to make this more scalabale
+
+* Setting up WebAPI routes to perform CRUD using REST API.
+* Instead of adding HC_YEAR(s) as a separate column, I could have add an attribute called YEAR and add those year entries in that specific attribute. For example, if you add HC_2019 in your CSV file, it would have pick the 2019 automatically as a year and will add the year's value against the school code's HeadCount.
+* Search feature to search by ranging years "From" to "To".
+* Magento Extension's Enable/Disable feature which could be set as global in general settings.
+## Magento DevDocs and Other links I used to write this extension
+
+* For Importing Custom Entity : https://devdocs.magento.com/guides/v2.4/ext-best-practices/tutorials/custom-import-entity.html
+* For Creating a Module : https://devdocs.magento.com/videos/fundamentals/create-a-new-module/
+* For Configuring required files & configuration to create extension : https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/required-configuration-files.html
+* To Create DB Schema as per as NSW School Headcount data https://devdocs.magento.com/guides/v2.4/extension-dev-guide/declarative-schema/db-schema.html
+* Created listing in Admin : https://devdocs.magento.com/guides/v2.4/extension-dev-guide/admin-grid.html

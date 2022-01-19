@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="HN_HeadCount::manager" title="HeadCount" module="HN_HeadCount" sortOrder="30" resource="HN_HeadCount::manager" />
+        <add id="HN_HeadCount::add_row" title="HeadCount Manager" module="HN_HeadCount" sortOrder="20" parent="HN_HeadCount::manager" action="grid/grid" resource="HN_HeadCount::add_row"/>
+    </menu>
+</config>
